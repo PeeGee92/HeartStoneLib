@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "617796222221",
+    "firebase_url": "https://heartstonelib-eb82a.firebaseio.com",
+    "project_id": "heartstonelib-eb82a",
+    "storage_bucket": "heartstonelib-eb82a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617796222221:android:ea781255dffbddb4",
+        "android_client_info": {
+          "package_name": "com.peegee.heartstonelib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617796222221-8ecge7rubg1s4rmosk2iq328iho6t8ij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA74a2G4Wfslojr_hUb3gdNVBByl6jED6A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

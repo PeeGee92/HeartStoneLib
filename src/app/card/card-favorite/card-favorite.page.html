@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Favorite Cards</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="favoriteCardList.length > 0">
+        <ion-card *ngFor="let card of favoriteCardList">
+            <ion-card-header text-wrap>
+                <ion-card-title>
+                    {{card.name}}
+                    <ion-icon (click)="favoriteCard(card)" [ngClass]="card.favortie ? 'favorite' : 'normal'" name="flame" class="favorite-icon"></ion-icon>
+                </ion-card-title>
+            </ion-card-header>
+        </ion-card>
+    </ion-list>
+</ion-content>
