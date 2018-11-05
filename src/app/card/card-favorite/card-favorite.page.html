@@ -7,10 +7,11 @@
 <ion-content>
     <ion-list *ngIf="favoriteCardList.length > 0">
         <ion-card *ngFor="let card of favoriteCardList">
-            <ion-card-header text-wrap>
-                <ion-card-title>
+            <ion-card-header>
+                <ion-card-title (click)="openCardDetails(card)">
                     {{card.name}}
                     <ion-icon (click)="favoriteCard(card)" [ngClass]="card.favortie ? 'favorite' : 'normal'" name="flame" class="favorite-icon"></ion-icon>
+                    <!-- <ion-button icon="arrow" [href]="'/tabs/(card:card/' + card.cardId + ')'"></ion-button> -->
                 </ion-card-title>
             </ion-card-header>
         </ion-card>

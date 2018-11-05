@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FavoriteCardStore } from '../shared/card-favorite.store';
 import { Subscription } from 'rxjs';
 import { Card } from '../shared/card.model';
+import { NavController } from '@ionic/angular';
+import { CardDetailPage } from '../card-detail/card-detail.page';
 
 @Component({
     selector: 'app-card-favorite',
@@ -15,7 +17,7 @@ export class CardFavoritePage {
 
     favoriteCardSub: Subscription
 
-    constructor (private favoriteStore: FavoriteCardStore) {
+    constructor (private favoriteStore: FavoriteCardStore, private navCtrl: NavController) {
         this.favoriteCardSub = this.favoriteStore.favoriteCards.subscribe(
             (favoriteCards: any) => {
               this.favoriteCardList = this.getFavoriteCardList(favoriteCards);
@@ -42,5 +44,10 @@ export class CardFavoritePage {
 
     favoriteCard(card: Card) {
         this.favoriteStore.toggleCard(card);
+    }
+
+    openCardDetails(card: Card) {
+        debugger;
+        // this.navCtrl.push(CardDetailPage);
     }
 }

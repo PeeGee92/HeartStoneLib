@@ -23,13 +23,6 @@ export class AppComponent {
     this.notificationSetup();
   }
 
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
-  }
-
   private notificationSetup() {
     this.fcmService.getToken();
     this.fcmService.onNotifications().subscribe(
@@ -37,5 +30,12 @@ export class AppComponent {
         this.toastService.presentToast(msg.body);
       }
     );
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
   }
 }

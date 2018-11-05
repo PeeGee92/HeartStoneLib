@@ -36,7 +36,7 @@ export class FavoriteCardStore {
         }
       
         this.storage.set('favoriteCards', favoriteCards).then(() => {
-            this._favoriteCardsSubject.next('favoriteCards');
+            this._favoriteCardsSubject.next(favoriteCards);
         });
     }
 
